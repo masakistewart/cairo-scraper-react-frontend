@@ -27,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* found this Component online online, did some slight modification. A bit buggy */}
         <ChartView
           rootData={this.state.json}
           data={this.state.selectedJSON}

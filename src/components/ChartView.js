@@ -196,7 +196,7 @@ class ChartView extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main">
                 <div className="breadcumb">
                     <ul>{
                         this.state.breadcrumbs.map((item, i) => {

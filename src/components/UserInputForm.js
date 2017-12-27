@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TextField from 'material-ui/TextField';
+// import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 
@@ -26,7 +26,6 @@ export default class UserInputForm extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 <Paper style={this.paperStyle} zDepth={1}>

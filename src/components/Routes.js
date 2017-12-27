@@ -18,7 +18,6 @@ export default class Routes extends Component {
         let scrapedJson = await fetch('https://dry-sands-95822.herokuapp.com/');
         scrapedJson = await scrapedJson.json();
         await this.setState({ json: {data: scrapedJson} })
-        await console.log(this.state.json)
     }
 
     render() {

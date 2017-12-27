@@ -1,39 +1,15 @@
 import React, { Component } from 'react';
-import ChartView from './ChartView'
-import '../css/App.css'
+import '../css/App.css';
+import { Switch, Route } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Routes from './Routes'
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.getJsonData()
-    this.state = {
-      json: this.props.json,
-      selectedJSON: this.props.json,
-    }
-  }
-
-  changeTargetNodeOnChart(json) {
-    this.setState({
-      selectedJSON: json
-    })
-  }
-
-  async getJsonData() {
-    let scrapedJson = await fetch('https://dry-sands-95822.herokuapp.com/')
-    scrapedJson = await scrapedJson.json()
-    await console.log(scrapedJson)
-    await this.changeTargetNodeOnChart(scrapedJson)
-  }
 
   render() {
     return (
-      <div className="App">
-        {/* found this Component online online, did some slight modification. A bit buggy */}
-        <ChartView
-          rootData={this.state.json}
-          data={this.state.selectedJSON}
-          changeTargetNodeOnChart={this.changeTargetNodeOnChart.bind(this)}
-        />
-      </div>
+      <MuiThemeProvider>
+        <Routes />
+      </MuiThemeProvider>
     );
   }
 }

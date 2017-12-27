@@ -2,3 +2,18 @@
   height: 100%;
   width: 100%;
 }
+
+.hide-me {
+  display: none;
+}
+
+.container {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+@media (max-width: 400){
+  .container {
+    margin: 0;
+  }
+}
